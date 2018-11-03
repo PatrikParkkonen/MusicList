@@ -13,9 +13,11 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+
 .application.properties
 .src/main/resources/application.properties
 src/main/resources/application.properties
+application.properties
 
 # External tool builders
 .externalToolBuilders/
