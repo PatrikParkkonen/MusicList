@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import fi.haagahelia.project.MusicList.domain.Song;
 import fi.haagahelia.project.MusicList.domain.SongRepository;
-
+import fi.haagahelia.project.MusicList.domain.Genre;
 import fi.haagahelia.project.MusicList.domain.GenreRepository;
 
 
@@ -91,5 +91,11 @@ public class MusicListController {
         return "redirect:../musiclist";
     	
 }
+    
+    @RequestMapping(value = "/addgenre")
+    public String addGenre(Model model){
+    	model.addAttribute("genre", new Genre());
+    	return "addgenre";
+    } 
 
 }
