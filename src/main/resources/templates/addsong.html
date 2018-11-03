@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MusicList</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Add song</h1>
+	<div>
+		<form th:object="${song}" th:action="@{save}" action="#" method="post">
+		  	<label for="name">Name</label>
+			<input type="text" id="title" th:field="*{name}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+		  	<label for="artist">Artist</label>
+			<input type="text" id="author" th:field="*{artist}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+		  	<label for="album">Album</label>
+			<input type="text" th:field="*{album}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+				<label for="duration">Duration</label>
+			<input type="text" th:field="*{duration}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+				<label for="date">Date</label>
+			<input type="text" th:field="*{date}" />
+			
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<label for="catlist">Genre</label>
+			<select id="catlist" th:field="*{genre}" class="form-control">
+			<option th:each="genre: ${genre}" th:value="${genre.genreid}" th:text="${genre.name}"></option>
+			</select>
+			
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" value="Save"></input>
+		</form>
+	</div>
+</body>
+</html>
