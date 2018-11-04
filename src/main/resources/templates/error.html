@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MusicList</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"
+	th:href="@{css/bootstrap.min.css}" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+	
+	<h2 class="font-style">
+	OOPSIE WOOPSIE!! Uwu We made a fucky wucky!! A wittle fucko boingo! The code monkeys at our headquarters are working VEWY HAWD to fix this!
+	</h2>
+	<img src="https://media.discordapp.net/attachments/496351970903326721/508741244051128320/monkey_body.png"></img>
+	<img src="https://media.discordapp.net/attachments/496351970903326721/508741244051128320/monkey_body.png"></img>
+	<img src="https://media.discordapp.net/attachments/496351970903326721/508741244051128320/monkey_body.png"></img>
+	<img src="https://media.discordapp.net/attachments/496351970903326721/508741244051128320/monkey_body.png"></img>
+	<img src="https://media.discordapp.net/attachments/496351970903326721/508741244051128320/monkey_body.png"></img>
+	<img src="https://media.discordapp.net/attachments/496351970903326721/508741244051128320/monkey_body.png"></img>
+	<img src="https://media.discordapp.net/attachments/496351970903326721/508741244051128320/monkey_body.png"></img>
+	
+	
+	<script>
+	 window.setInterval(function(){
+
+		    var randomColor = '#'+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
+		    
+		    $('.font-style').css({
+		      'color' : randomColor,
+		    });
+
+		  }, 2000);
+	
+	</script>
+</body>
+</html>

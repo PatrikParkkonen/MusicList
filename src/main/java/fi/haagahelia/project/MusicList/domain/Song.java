@@ -6,6 +6,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.validation.Valid;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -17,10 +20,24 @@ public class Song {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
+	@NotNull(message = "Name cannot be null")
+	@Min(1)
 	private String name;
+	
+	@NotNull(message = "Name cannot be null")
+	@Min(1)
 	private String artist;
+	
+	@NotNull(message = "Name cannot be null")
+	@Min(1)
 	private String album;
+	
+	@NotNull(message = "Name cannot be null")
+	@Min(1)
 	private String duration;
+	
+	@Valid
 	private int date;
 	
 	 	@ManyToOne
