@@ -97,5 +97,11 @@ public class MusicListController {
     	model.addAttribute("genre", new Genre());
     	return "addgenre";
     } 
+    
+    @RequestMapping(value = "/savegenre", method = RequestMethod.POST)
+    public String savegenre(Genre genre){
+        grepository.save(genre);
+        return "redirect:musiclist";
+    }    
 
 }
