@@ -26,16 +26,18 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         .authorizeRequests().antMatchers("/css/**").permitAll() 
         .and()
         .authorizeRequests()
-        .antMatchers("/", "add", "save", "musiclist", "delete/{id}").permitAll()
-          .anyRequest().authenticated()
+        .antMatchers("/", "musiclist", "/login").permitAll()
+        .antMatchers("add", "save", "delete/{id}", "edit", "songs", "song/{id}", "edit/{id}", "edit/editsave", "addgenre", "editgenre").hasRole("Admin")
+         
           .and()
       .formLogin()
           .loginPage("/login")
           .defaultSuccessUrl("/musiclist")
           .permitAll()
           .and()
-      .logout()
+      .logout().logoutSuccessUrl("/musiclist")
           .permitAll();
+   
     }
     
 

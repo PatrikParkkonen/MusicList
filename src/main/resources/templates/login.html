@@ -8,9 +8,7 @@
     </head>
     <body>
     <div>Welcome! Enter your username/password to get editing access</div>
-        <div th:if="${param.error}">
-            Invalid username and password.
-        </div>
+     
         <div th:if="${param.logout}">
             You have been logged out.
         </div>
