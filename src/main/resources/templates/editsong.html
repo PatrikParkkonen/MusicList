@@ -9,7 +9,7 @@
 <body>
 	<h1>Edit song</h1>
 	<div>
-		<form th:object="${song}" th:action="@{editsave}" action="#" method="post">
+		<form class="form form-horizontal" th:object="${song}" th:action="@{editsave}" action="#" method="post">
 		
 			<input type="hidden" th:field="*{id}">
 		  	<label for="name">Name</label>
@@ -24,7 +24,7 @@
 				<label for="duration">Duration</label>
 			<input type="text" th:field="*{duration}" />
 			<div style="clear: both; display: block; height: 10px;"></div>
-				<label for="date">Date</label>
+				<label for="date">Year</label>
 			<input type="text" th:field="*{date}" />
 			
 			<div style="clear: both; display: block; height: 10px;"></div>
@@ -34,8 +34,10 @@
 			</select>
 			
 			<div style="clear: both; display: block; height: 10px;"></div>
-			<input type="submit" value="Save"></input>
+			<input class="btn btn-primary" type="submit" value="Save"></input>
 		</form>
 	</div>
+		<br>
+	<div>All fields are required</div>
 </body>
 </html>

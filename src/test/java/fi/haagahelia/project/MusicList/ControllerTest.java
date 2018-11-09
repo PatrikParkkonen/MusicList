@@ -17,6 +17,7 @@ public class ControllerTest {
 	@Autowired
 	private MusicListController controller;
 	
+	//Tests to see if controller exists
 	@Test
 	public void contextLoads() throws Exception {
 		assertThat(controller).isNotNull();
