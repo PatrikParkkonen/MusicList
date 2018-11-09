@@ -9,6 +9,7 @@ import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -21,20 +22,20 @@ public class Song {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
-	@NotNull(message = "Name cannot be null")
-	@Min(1)
+	@NotNull
+	@Size(min=1, message="Name cannot be null")
 	private String name;
 	
-	@NotNull(message = "Name cannot be null")
-	@Min(1)
+	@NotNull
+	@Size(min=1, message="Name cannot be null")
 	private String artist;
 	
-	@NotNull(message = "Name cannot be null")
-	@Min(1)
+	@NotNull
+	@Size(min=1, message="Name cannot be null")
 	private String album;
 	
-	@NotNull(message = "Name cannot be null")
-	@Min(1)
+	@NotNull
+	@Size(min=1, message="Name cannot be null")
 	private String duration;
 	
 	@Valid
